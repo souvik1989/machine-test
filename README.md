@@ -27,22 +27,31 @@ You have to register first and then login .then you will be redirected to the da
 
 Running the Development Server
 - php artisan migrate
+- 
 - php artisan serve
     Navigate to http://localhost:8000 in your browser to view the application.
+  
 - php artisan db:seed
 
 
 ## Usage
 - Web Interface
     List Categories: /categories
+  
     Create Categories: /categories/create
+  
     Edit Categories: /categories/{id}/edit
+  
     Delete Categories: /categories/{id}
 
     List Task: /task
+  
     Create Task: /task/create
+  
     Edit Task: /task/{id}/edit
+  
     Delete Task: /task/{id}
+  
 - API Endpoints
     Get All Task: GET /api/list-tasks
   
