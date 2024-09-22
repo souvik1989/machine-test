@@ -3,7 +3,7 @@
 <x-app-layout>
     <div class="container mx-auto p-4">
         <div class="flex justify-between items-center mb-4">
-            <h1 class="text-2xl font-bold">Categories</h1>
+            <h1 class="text-2xl font-bold text-white">Categories</h1>
 
             <!-- Search Form -->
             <form method="GET" action="{{ route('category.index') }}" class="flex items-center space-x-2">

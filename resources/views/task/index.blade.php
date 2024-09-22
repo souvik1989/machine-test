@@ -1,7 +1,7 @@
 <x-app-layout>
     <div class="container mx-auto p-4">
         <div class="flex justify-between items-center mb-4">
-            <h1 class="text-2xl font-bold">Tasks</h1>
+            <h1 class="text-2xl font-bold text-white">Tasks</h1>
 
             <!-- Search Form -->
             <form method="GET" action="{{ route('tasks.index') }}" class="flex items-center space-x-2">
@@ -50,16 +50,16 @@
                     <td class="py-2 px-4 border-b">{{ $task->task_category->name }}</td>
                     <td class="py-2 px-4 border-b">{{ \Carbon\Carbon::parse($task->due_date)->format('Y-m-d') }}</td>
                     <td class="py-2 px-4 border-b">@if($task->priority==0) Low @elseif($task->priority==1) Medium @else High @endif</td>
-                    <td class="py-2 px-4 border-b">@if($task->status==0) Disable @else Enable @endif</td>
+                    <td class="py-2 px-4 border-b">@if($task->status==0) Overdue @else Completed @endif</td>
                     <td class="py-2 px-4 border-b flex space-x-2">
                         <a href="{{ route('tasks.edit', $task) }}" class="text-green-500">Edit</a>
                         <form action="{{ route('tasks.status', $task->id) }}" method="POST">
                             @csrf
                             <input type="hidden" name="status" value="{{ $task->status }}">
                             @if ($task->status == '0')
-                            <button type="submit" class="text-yellow-500">Enable</button>
+                            <button type="submit" class="text-green-500">Completed</button>
                             @else
-                            <button type="submit" class="text-green-500">Disable</button>
+                            <button type="submit" class="text-red-500">Overdue</button>
                             @endif
                         </form>
                         <form action="{{ route('tasks.priority', $task->id) }}" method="POST">

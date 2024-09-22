@@ -2,7 +2,7 @@
 
 <x-app-layout>
     <div class="container mx-auto p-4">
-        <h1 class="text-2xl font-bold mb-4">Edit Category</h1>
+        <h1 class="text-2xl font-bold mb-4 text-white">Edit Category</h1>
 
         <form action="{{ route('category.update', $category) }}" method="POST" class="bg-white p-6 border border-gray-200 rounded-lg">
             @csrf
