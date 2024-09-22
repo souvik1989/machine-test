@@ -3,7 +3,7 @@
 
 
 #SETUP
-To set up The project locally.you have to put it in local server folder, then you have to create a database in local server and import the sql file.Then you have to put the DB detail in the .env file of the project directory .Then you have to run php artisan serve in terminal of the project path.
+To set up The project locally.you have to put it in local server folder, then you have to create a database in local server.Then you have to put the DB detail in the .env file of the project directory .Then you have to run php artisan migrate and then php artisan serve in terminal of the project path.
 
 
 
